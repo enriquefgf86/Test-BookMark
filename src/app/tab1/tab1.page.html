@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class='pink'>
+   
+    <ion-chip color="danger" mode="ios">
+      <ion-label>Home Page</ion-label>
+    </ion-chip>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class='pink'>
+  <ion-header collapse="condense">
+    <ion-toolbar class='pink'>
+      
+      <ion-chip color="danger" mode="ios">
+        <ion-label class="text-size">Home Page</ion-label>
+      </ion-chip>
+
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3" size-md='4' size-sm='12' size-xs='12'>
+        <app-create-bookmark-button></app-create-bookmark-button>
+
+        <!-- <ion-slides mode="ios"  scrollbar="ios" [options]="slideOptions">
+            <ion-slide>
+              <ion-button size="small" color='danger' fill="clear" shape="round" (click)="modalCreateBookMark()">
+                Create a Book Mark
+              </ion-button>
+            </ion-slide>
+          </ion-slides> -->
+
+      </ion-col>
+      <ion-col size="9" size-md='8' size-sm='12' size-xs='12'>
+        <app-all-bookmarks></app-all-bookmarks>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

@@ -1,0 +1,80 @@
+<!-- <ion-content > -->
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="12" size>
+      <ion-header>
+        <ion-toolbar class='backi'>
+          <ion-chip color="primary" mode="ios">
+            <ion-label>Bookmarks</ion-label>
+          </ion-chip>
+
+        </ion-toolbar>
+      </ion-header>
+      <!-- <ion-content > -->
+
+      <ion-row class='pink'>
+
+        <ion-item *ngFor="let book of tables" class='pink'>
+
+          <ion-col  class='pink'>
+            <span class="headerWork">
+              <ion-chip color="danger" mode="ios">
+                <ion-label class="text-size">{{book.group}}</ion-label>
+              </ion-chip>
+            </span>
+
+            <ion-item *ngFor="let bookByGroup of book.groups" class='pink'>
+
+              <ion-row>
+
+                <ion-col size="6" size-md='6' size-lg='6' size-xl='6 'size-sm='12' size-xs='12'>
+                  <ion-card class='cardWidth backi' *ngIf="bookByGroup.group===book.group">
+                    <ion-card-title class='titleSize'>Topic: </ion-card-title>
+                    <ion-card-subtitle class='text-ize' color="danger"> {{bookByGroup.title|bookmarkPipe|async}}
+                    </ion-card-subtitle>
+                  </ion-card>
+                </ion-col>
+
+                <ion-col style='margin-right:0px' class="ion-align-self-end" size="6" size-md='6' size-lg='6' size-xl='6 'size-sm='12' size-xs='12'>
+                  <ion-row>
+
+                    <ion-col size="6">
+                      <ion-button class='actionButtons' [routerLink]="['bookmark/{{bookByGroup.id}}']"
+                        (click)="seeBookMark($event)" size='small' clear color="transparent"
+                        *ngIf="bookByGroup.group===book.group">
+                        <!-- <ion-icon class='actionIcons' slot="icon-only" size='small' clear name="eye-outline"></ion-icon> -->
+                        <ion-img [id]='bookByGroup.id' class='imgActions' src="../../../assets/see.png"></ion-img>
+
+                      </ion-button>
+                    </ion-col>
+
+                    <ion-col size="6">
+                      <ion-button class='actionButtons' (click)="deleteBookMark($event)" size='small' clear
+                        color="transparent" *ngIf="bookByGroup.group===book.group">
+                        <!-- <ion-icon class='actionIcons' slot="icon-only" size='small' name="trash-outline"></ion-icon> -->
+                        <ion-img [id]='bookByGroup.id' class='imgActions' src="../../../assets/trash.png"></ion-img>
+                      </ion-button>
+                    </ion-col>
+
+                  </ion-row>
+                </ion-col>
+
+              </ion-row>
+
+            </ion-item>
+
+          </ion-col>
+
+        </ion-item>
+      </ion-row>
+
+      <!-- <iframe  name="myFrame"></iframe>
+<p><a href="https://www.tutorialrepublic.com" target="myFrame">Open TutorialRepublic.com</a></p> -->
+
+      <!-- </ion-content> -->
+
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<!-- </ion-content> -->

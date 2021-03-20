@@ -1,0 +1,92 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+.actionButtons {
+  width: 25px;
+  height: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+.imgActions {
+  width: 28px;
+  height: 23px;
+  position: absolute;
+}
+.imgActionsHome {
+  width: 28px;
+  height: 23px;
+  position: relative;
+}
+.my-custom-modal {
+  .modal-wrapper {
+    height: 40% !important;
+    width: 60% !important;
+    position: absolute;
+    color: red;
+  }
+}
+.scroller {
+  position: relative;
+  margin-top: 50%;
+}
+
+.backi,
+.toolbar-container {
+  --background: #e0ffff;
+  border-radius: 3px !important;
+}
+.text-size {
+  font-size: 0.7rem !important;
+}
+
+.cardWidth {
+  width: 5rem !important;
+}
+.headerWork {
+  display: flex;
+  justify-content: center;
+}
+.titleSize{
+  font-size: 0.6rem !important;
+}
+.pink{
+  --background:rgba(255, 91, 113,0.09);
+}
+.blue{
+  --background:rgba(5, 255, 242, 0.377);
+
+}
+
+@media only screen 
+// and (min-device-width : 320px) 
+and (max-device-width : 769px) {
+.scroller {
+  position: relative;
+  margin-top: 10%;
+}
+}

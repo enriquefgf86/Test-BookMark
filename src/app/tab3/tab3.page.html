@@ -1,0 +1,84 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class='pink'>
+    <ion-row>
+      <ion-col size="6">
+        <ion-img class='imgActionsHome' src="../../assets/bookmark.png"></ion-img>
+      </ion-col>
+      <ion-col size="6" routerLink='tabs/tab1'>
+        <ion-img class='imgActionsHome' src="../../assets/home.png"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class='pink'>
+  <ion-header collapse="condense">
+    <ion-toolbar class='pink'>
+      <ion-title size="large"></ion-title>
+
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid fixed *ngIf="selectedBookMark">
+    <ion-row>
+      <ion-col size="12">
+        <ion-card class='pink'>
+
+          <ion-chip color="danger" mode="ios">
+            <ion-label>Title: <ion-chip color="danger" mode="ios">
+                <ion-label>{{selectedBookMark.title}}</ion-label>
+              </ion-chip>
+            </ion-label>
+          </ion-chip>
+
+          <ion-chip color="danger" mode="ios">
+            <ion-label>Group: <ion-chip color="danger" mode="ios">
+                <ion-label>{{selectedBookMark.group}}</ion-label>
+              </ion-chip>
+            </ion-label>
+          </ion-chip>
+
+          <ion-card-content>
+            <ion-col>
+              <ion-row>
+                <ion-chip *ngIf="!showLink" color="danger" mode="ios" outline="true" (click)="showLink=!showLink">
+                  <ion-avatar>
+                    <ion-img class='imgActionsHome' src="../../assets/gotToWeb.png"></ion-img>
+                  </ion-avatar>
+                  <ion-label>Preview Website</ion-label>
+                </ion-chip>
+
+                <ion-chip *ngIf="showLink" color="danger" mode="ios" outline="true" (click)="showLink=!showLink">
+                  <ion-avatar>
+                    <ion-img class='imgActionsHome' src="../../assets/gotToWeb.png"></ion-img>
+                  </ion-avatar>
+                  <ion-label>Hide Preview</ion-label>
+                </ion-chip>
+
+                <a [href]="selectedBookMark.link" target="_blank">
+                  <ion-chip color="danger" mode="ios" outline="true">
+                    <ion-avatar>
+                      <ion-img class='imgActionsHome' src="../../assets/bookmark.png"></ion-img>
+                    </ion-avatar>
+                    <ion-label>Visit Website</ion-label>
+                  </ion-chip>
+                </a>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12"> <iframe *ngIf="showLink"
+                    [src]="sanitizerurl.bypassSecurityTrustResourceUrl(selectedBookMark.linkForIframe)"
+                    name="myFrame"></iframe>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+
+
+
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
