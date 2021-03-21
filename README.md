@@ -10,12 +10,16 @@ Once downloaded this project from Git ,go to its directory and  run on your term
 then 'ionic serve' .
 
 Task committed
-*Create Bookmark app======================================DONE
-*Implementing NGRX========================================DONE
-*Use of Angular Material==================================NOT DONE
+*Create Bookmark app======================================DONE.
+
+*Implementing NGRX========================================DONE.
+
+*Use of Angular Material==================================NOT DONE.
 (For bugs in my terminal , the Angular Material was presenting problems (Guess Ivy plugin of Angular 9
  has to do with it). As alternative was implemented a similar in functions framework:IONIC )
+
 *Functionalities of app==========================DONE 
+
 *Enhance app functionalities with other features==========DONE
 
 Github repo: https://github.com/enriquefgf86/Test-BookMark
