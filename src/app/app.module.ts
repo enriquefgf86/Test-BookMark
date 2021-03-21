@@ -12,6 +12,8 @@ import { StoreModule } from '@ngrx/store';
 import { globalReducer } from './globalReducer';
 import { environment } from '../environments/environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { AngularFireModule } from '@angular/fire';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +25,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
 
     StoreModule.forRoot(globalReducer, {
       runtimeChecks: {

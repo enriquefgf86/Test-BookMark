@@ -9,7 +9,8 @@ import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { GlobalAppState } from '../../globalReducer';
 import { ModalController, PopoverController } from '@ionic/angular';
-import { PopupsComponent } from 'src/app/popups/popups/popups.component';
+import { PopupsComponent } from '../../popups/popups/popups.component';
+
 
 @Component({
   selector: 'app-create-bookmark',

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "test-accenture-154dc": {
+      "hosting": {
+        "app": [
+          "test-accenture-154dc"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "test-accenture-154dc"
+  }
+}

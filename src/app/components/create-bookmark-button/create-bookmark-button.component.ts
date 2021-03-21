@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
-import { CreateBookmarkComponent } from 'src/app/modals/create-bookmark-modal/create-bookmark-modal.component';
+import { CreateBookmarkComponent } from '../../modals/create-bookmark-modal/create-bookmark-modal.component';
 
 @Component({
   selector: 'app-create-bookmark-button',

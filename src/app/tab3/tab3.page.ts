@@ -23,7 +23,7 @@ export class Tab3Page implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private stateStore: Store<GlobalAppState>,
-    private sanitizerurl: DomSanitizer
+    public sanitizerurl: DomSanitizer
   ) {}
   async ngOnInit() {
     await this.getSeletectedBookMark();
